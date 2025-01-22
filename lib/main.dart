@@ -3,6 +3,7 @@ import 'package:fluent_ui_trial/features/home/home_view.dart';
 import 'package:fluent_ui_trial/features/settings/setting_view.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
@@ -19,6 +20,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return FluentApp(
+      title: 'Fluent UI Trial',
       home: NavigationView(
         appBar: const NavigationAppBar(title: Text('Fluent UI Test')),
         pane: NavigationPane(
